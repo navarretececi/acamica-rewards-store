@@ -1,0 +1,5 @@
+.button{
+    border-radius: 20.5px;
+    padding: 2% 7%;
+    background: var(--grey);
+}

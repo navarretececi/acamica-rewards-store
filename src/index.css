@@ -20,3 +20,24 @@ body{
 --textLightGrey: #A3A3A3;
 --textDarkGrey: #616161;
 }
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.normal-text{
+  font-size: 24px;
+  color: var(--textDarkGrey);
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

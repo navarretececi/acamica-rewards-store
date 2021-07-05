@@ -1,8 +1,10 @@
+import { Nav } from './components/nav/Nav'
+
+
 function App() {
   return (
     <div>
-     
-      <h1>LALLALALLA</h1>
+      <Nav />
     </div>
   );
 }
