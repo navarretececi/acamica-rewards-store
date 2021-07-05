@@ -10,6 +10,8 @@
 
 body{
   width: 100vw;
+  max-width: 1400px;
+  min-width: 400px;
 }
 
 :root{
@@ -32,7 +34,7 @@ body{
 }
 
 .normal-text{
-  font-size: 24px;
+  font-size: 20px;
   color: var(--textDarkGrey);
 }
 
@@ -40,4 +42,10 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 600px) {
+  .normal-text{
+    font-size: 24px;
+  }
 }

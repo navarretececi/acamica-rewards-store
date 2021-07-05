@@ -1,0 +1,23 @@
+.header{
+    height: 480px;
+}
+
+.img-portal{
+    object-fit: fill;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.principal-text{
+    color: var(--white);
+    font-size: 40px;
+    transform: translateY(-135%);
+    z-index: 9999;
+    margin-left: 10%;
+}
+
+@media (min-width: 600px) {
+    .principal-text{
+        font-size: 64px;
+    }
+  }
