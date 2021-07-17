@@ -1,6 +1,6 @@
 {
   "name": "store-navarrete-cecilia",
-  "homepages": "https://navarretececi.github.io/acamica-rewards-store",
+  "homepage": "https://navarretececi.github.io/acamica-rewards-store",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
