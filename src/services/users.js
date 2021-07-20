@@ -5,11 +5,9 @@ export const getUser = async() =>{
     const response = await fetch(BASE_URL+"user/me", {headers})
     const data = await response.json()
     return data
-   
   } catch (error){
-      console.log (error)
+      console.log(error)
   }
-  
 }
 
 
