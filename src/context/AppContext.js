@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const AppContext = React.createContext();
 
 export default function AppProvider({ children }) {
-  const contextoData = {
-    kappa: "K",
-    
-  };
+  const [user, setUser] = useState({})
   return (
-    <AppContext.Provider value={contextoData}>
+    <AppContext.Provider value={{user, setUser}}>
         {children}
     </AppContext.Provider>
   );

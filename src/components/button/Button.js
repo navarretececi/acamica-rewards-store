@@ -1,10 +1,14 @@
 import './Button.css';
+import React, { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 
-export const Button =(props)=>{
+export const Button =()=>{
+    const { user } = useContext(AppContext);
+
     return (
         <div className="button flex-row">
-            <h5 className="normal-text center">{props.text}</h5>
-            <img className="center" src={props.image} alt="icono" />
+            <h5 className="normal-text center">{user.points}</h5>
+            <img className="center" src="./images/coin.svg" alt="icono" />
         </div>
     )
 }
