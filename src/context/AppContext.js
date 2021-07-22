@@ -6,10 +6,10 @@ export default function AppProvider({ children }) {
   const [user, setUser] = useState({})
   const [products, setProducts] = useState([])
 
-  let totalProduct = product.length
+  let totalProducts = products.length
 
   return (
-    <AppContext.Provider value={{user, setUser, products, setProducts}}>
+    <AppContext.Provider value={{user, setUser, products, setProducts, totalProducts}}>
         {children}
     </AppContext.Provider>
   );

@@ -1,17 +1,18 @@
 import './App.css';
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AppContext } from "./context/AppContext";
 import { Nav } from './components/nav/Nav'
 import { Header } from './components/header/Header'
 import { Result } from './components/result/Result'
 import { Footer } from './components/footer/Footer'
-import { useEffect } from 'react';
 import { getUser } from './services/users'
 import { getProducts } from './services/products';
+import { Filter } from './components/filter/Filter';
+import { usePagination } from './utils/pagination'
 
 function App() {
-  const { setUser, setProducts } = useContext(AppContext);
-
+  const { setUser, products, setProducts } = useContext(AppContext);
+  
   useEffect (()=>{
       getUser()
         .then ((user) =>setUser(user))
@@ -19,15 +20,21 @@ function App() {
 
   useEffect (()=>{
     getProducts()
-      .then ((products) => setProducts(products))
+      .then ((prod) => setProducts(prod))
 } , [])
+
+
+const nuevos_productos = usePagination(products,2)
+console.log("nuevos pructos:", nuevos_productos.currentData())
+console.log("productos old (a este le haces map ahora)", products.lenght)
 
   return (
     <div>
       <Nav />
       <Header/>
-      <Result />
       <section className="section">
+        <Filter />
+        <Result />
         <Footer />
       </section>
       

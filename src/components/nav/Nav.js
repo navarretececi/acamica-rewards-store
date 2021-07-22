@@ -1,5 +1,5 @@
 import './Nav.css';
-import { Button } from '../button/Button'
+import { BtnPoint } from '../button/BtnPoint'
 import React, { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 
@@ -13,7 +13,7 @@ export const Nav=()=>{
             </div>
             <div className="container-user flex-row">
                 <h3 className="normal-text center">{user.name}</h3>
-                <Button />
+                <BtnPoint text={user.points} url={"./images/coin.svg"} />
             </div>
         </nav>
     )

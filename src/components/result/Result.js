@@ -7,7 +7,7 @@ export const Result =()=>{
     const { products } = useContext(AppContext);
 console.log(products)
     return(
-        <section className="result flex-row">
+        <main className="result flex-row">
             {
                products.length > 0 ? products.map((producto) => 
                 <Product 
@@ -17,6 +17,6 @@ console.log(products)
                     category={producto.category}
                 />) : null 
             }
-        </section>
+        </main>
     )
 }
