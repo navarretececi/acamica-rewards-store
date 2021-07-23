@@ -2,6 +2,7 @@ import "./Filter.css";
 import React, { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import { BtnFilter} from "../button/BtnFilter";
+import { Pagination } from "../pagination/Pagination";
 
 export const Filter =()=>{
     const { totalProducts } = useContext(AppContext);
@@ -11,9 +12,7 @@ export const Filter =()=>{
             <div className="container-page center">
                 <h3 className="normal-text">XX of {totalProducts} products</h3>
             </div>
-            <button className="btn-arrow center">
-                <img src="./images/arrow-right.svg" alt="flecha"/>
-            </button>
+            <Pagination />
             <div className="container-filter flex-row">
                 <div className="container-sort">
                     <h3 className="normal-text">Sort by:</h3>

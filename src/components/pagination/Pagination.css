@@ -1,0 +1,9 @@
+.container-arrow{
+    height: 50px;
+    border-radius: 50%;
+}
+
+.btn-arrow{
+    width: 130px;
+    justify-content: space-around;
+}
