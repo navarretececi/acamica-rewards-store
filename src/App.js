@@ -9,6 +9,7 @@ import { getUser } from './services/users'
 import { getProducts } from './services/products';
 import { Filter } from './components/filter/Filter';
 import { usePagination } from './utils/pagination'
+import { addPoints } from './services/points';
 
 function App() {
   const { setUser, products, setProducts } = useContext(AppContext);
@@ -22,6 +23,8 @@ function App() {
     getProducts()
       .then ((prod) => setProducts(prod))
 } , [])
+
+  useEffect(()=>{ addPoints()}, [])
 
 
 const nuevos_productos = usePagination(products,2)
