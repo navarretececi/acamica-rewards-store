@@ -9,27 +9,26 @@ import { getUser } from './services/users'
 import { getProducts } from './services/products';
 import { Filter } from './components/filter/Filter';
 import { usePagination } from './utils/pagination'
-import { addPoints } from './services/points';
 
 function App() {
-  const { setUser, products, setProducts } = useContext(AppContext);
-  
+  const { user, setUser, points, setPoints, products, setProducts } = useContext(AppContext);
+
   useEffect (()=>{
       getUser()
-        .then ((user) =>setUser(user))
+        .then ((user) =>{
+          setUser(user)
+          setPoints(user.points)
+        })
   } , [])
 
   useEffect (()=>{
     getProducts()
-      .then ((prod) => setProducts(prod))
+    .then ((prod) => setProducts(prod))
 } , [])
 
-  useEffect(()=>{ addPoints()}, [])
-
-
 const nuevos_productos = usePagination(products,2)
-console.log("nuevos pructos:", nuevos_productos.currentData())
-console.log("productos old (a este le haces map ahora)", products.lenght)
+//console.log("nuevos pructos:", nuevos_productos.currentData())
+//console.log("productos old (a este hay q hacerle el map ahora)", products.lenght)
 
   return (
     <div>

@@ -3,8 +3,23 @@
     justify-content: space-between;
 }
 
+.container-points{
+    width: 260px;
+    justify-content: space-between;
+}
+
 .container-user{
-    width: 215px;
+    width: 200px;
     display: flex;
     justify-content: space-between;
+}
+
+@media (min-width: 600px) {
+    .container-user{
+        width: 240px;
+    }
+
+    .container-points{
+        width: 300px;
+    }
 }

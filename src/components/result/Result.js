@@ -5,7 +5,7 @@ import { Product } from "../product/Product";
 
 export const Result =()=>{
     const { products } = useContext(AppContext);
-console.log(products)
+
     return(
         <main className="result flex-row">
             {
