@@ -13,6 +13,7 @@ import { usePagination } from './utils/pagination'
 function App() {
   const { setUser, products, setProducts } = useContext(AppContext);
 
+  console.log(products)
   useEffect (()=>{
       getUser()
         .then ((user) =>{

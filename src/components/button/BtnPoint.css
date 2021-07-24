@@ -1,7 +1,24 @@
 .btn-point{
+    position: relative;
     border-radius: 20.5px;
     padding: 1% 5%;
     background: var(--grey);
+}
+
+.btn-neededPoints{
+    padding: 2% 1%;
+    top: -108%;
+    opacity: 65%;
+    background: var(--textDarkGrey);
+    width: 150px;
+    height: 42px;
+    left: 105px;
+    justify-content: space-between;
+}
+
+.text-neededPoints{
+    font-size: 13px;
+    color: var(--white);
 }
 
 @media (min-width: 600px) {

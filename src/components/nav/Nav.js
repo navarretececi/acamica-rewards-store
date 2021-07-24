@@ -15,7 +15,7 @@ export const Nav=()=>{
             <div className="container-points flex-row">
                 <div className="container-user flex-row">
                     <h3 className="normal-text center">{user.name}</h3>
-                    <BtnPoint text={user.points} url={"./images/coin.svg"} />
+                    <BtnPoint text={user.points} />
                 </div>
                 <div>
                     <BtnCoin />

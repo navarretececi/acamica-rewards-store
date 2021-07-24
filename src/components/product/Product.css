@@ -12,6 +12,7 @@
 }
 
 .product-container{
+    position: absolute;
     width: 252px;
     height: 182px;
     border-bottom: 1.5px solid var(--grey);

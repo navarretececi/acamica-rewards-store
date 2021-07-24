@@ -15,6 +15,7 @@ export const Result =()=>{
                     url={producto.img.hdUrl}
                     name={producto.name}
                     category={producto.category}
+                    points={producto.cost}
                 />) : null 
             }
         </main>
