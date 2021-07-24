@@ -2,7 +2,7 @@
     border-radius: 20.5px;
     width: 180px;
     height: 48px;
-    padding: 1% 5%;
+    padding: 1%;
     background: var(--grey);
     margin: 0.5%;
     border:none;
@@ -12,12 +12,6 @@
     background: var(--lightblue);
     color: var(--white)
 }
-
-/* @media (min-width: 500px) {
-    .btn-filter{
-        width: 115px;
-    }
-  } */
 
   @media (min-width: 900px) {
     .btn-filter{
