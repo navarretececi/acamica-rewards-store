@@ -11,20 +11,19 @@ import { Filter } from './components/filter/Filter';
 import { usePagination } from './utils/pagination'
 
 function App() {
-  const { user, setUser, points, setPoints, products, setProducts } = useContext(AppContext);
+  const { setUser, products, setProducts } = useContext(AppContext);
 
   useEffect (()=>{
       getUser()
         .then ((user) =>{
           setUser(user)
-          setPoints(user.points)
         })
-  } , [])
+  } , [setUser])
 
   useEffect (()=>{
     getProducts()
     .then ((prod) => setProducts(prod))
-} , [])
+} , [setProducts])
 
 const nuevos_productos = usePagination(products,2)
 //console.log("nuevos pructos:", nuevos_productos.currentData())

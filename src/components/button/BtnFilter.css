@@ -13,7 +13,13 @@
     color: var(--white)
 }
 
-@media (min-width: 600px) {
+/* @media (min-width: 500px) {
+    .btn-filter{
+        width: 115px;
+    }
+  } */
+
+  @media (min-width: 900px) {
     .btn-filter{
         padding: 1% 3%;
     }

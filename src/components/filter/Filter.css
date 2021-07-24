@@ -19,6 +19,7 @@
 .container-btn{
     flex-wrap: wrap;
     justify-content: space-around;
+    flex: 1;
 }
 
 @media (min-width: 900px) {

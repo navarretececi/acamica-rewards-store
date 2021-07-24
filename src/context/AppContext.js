@@ -4,7 +4,6 @@ export const AppContext = React.createContext();
 
 export default function AppProvider({ children }) {
   const [user, setUser] = useState({})
-  const [points, setPoints] = useState(0)
   const [products, setProducts] = useState([])
 
   let totalProducts = products.length
@@ -16,7 +15,7 @@ export default function AppProvider({ children }) {
 }
 
   return (
-    <AppContext.Provider value={{user, setUser, handlerAddPoint, points, setPoints, products, setProducts, totalProducts}}>
+    <AppContext.Provider value={{user, setUser, handlerAddPoint, products, setProducts, totalProducts}}>
         {children}
     </AppContext.Provider>
   );
