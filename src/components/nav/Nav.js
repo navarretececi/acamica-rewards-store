@@ -1,5 +1,5 @@
 import './Nav.css';
-import { BtnPoint } from '../button/BtnPoint'
+import { BtnTextImg } from '../button/BtnTextImg'
 import { BtnCoin } from '../button/BtnCoin'
 import React, { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
@@ -15,7 +15,7 @@ export const Nav=()=>{
             <div className="container-points flex-row">
                 <div className="container-user flex-row">
                     <h3 className="normal-text center">{user.name}</h3>
-                    <BtnPoint text={user.points} />
+                    <BtnTextImg text={user.points} />
                 </div>
                 <div>
                     <BtnCoin />

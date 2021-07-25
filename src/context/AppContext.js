@@ -10,7 +10,8 @@ export default function AppProvider({ children }) {
 
   const handlerAddPoint =()=>{
     let newUser = {...user}
-    newUser.points = user.points + 1000
+    /* newUser.points = user.points + 1000 */
+    newUser.points = user.points - 526000
     setUser(newUser)
 }
 

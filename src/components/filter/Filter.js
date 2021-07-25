@@ -1,7 +1,7 @@
 import "./Filter.css";
 import React, { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
-import { BtnFilter} from "../button/BtnFilter";
+import { BtnText} from "../button/BtnText";
 import { Pagination } from "../pagination/Pagination";
 
 export const Filter =()=>{
@@ -18,9 +18,9 @@ export const Filter =()=>{
                     <h3 className="normal-text">Sort by:</h3>
                 </div>
                 <div className="container-btn flex-row">
-                    <BtnFilter text={"Most recent"} />
-                    <BtnFilter text={"Lowest price"} />
-                    <BtnFilter text={"Highest price"} />
+                    <BtnText text={"Most recent"} />
+                    <BtnText text={"Lowest price"} />
+                    <BtnText text={"Highest price"} />
                 </div>
             </div>
         </aside>

@@ -7,3 +7,7 @@
 .btn-coin{
     height: 100%;
 }
+
+.btn-coin:hover{
+    transform: translateY(-2px);
+}

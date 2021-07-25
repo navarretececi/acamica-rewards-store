@@ -23,6 +23,10 @@ body{
 --textDarkGrey: #616161;
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 .flex-column{
   display: flex;
   flex-direction: column;

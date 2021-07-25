@@ -1,6 +1,6 @@
-import "./BtnPoint.css";
+import "./BtnTextImg.css";
 
-export const BtnPoint =(props)=>{
+export const BtnTextImg =(props)=>{
     return (
         <div className={`btn-point flex-row ${props.classContainer}`}>
             <h5 className={`normal-text center ${props.classText}`}>{props.text}</h5>

@@ -1,8 +1,16 @@
+.container-position{
+    position: absolute;
+}
+
+.blue-bag{
+    justify-content: center;
+    display: flex;
+}
+
 .product{
     width: 276px;
     height: 276px;
     margin: 1%;
-    padding: 2%;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     background: var(--white);
 }
@@ -12,7 +20,6 @@
 }
 
 .product-container{
-    position: absolute;
     width: 252px;
     height: 182px;
     border-bottom: 1.5px solid var(--grey);
@@ -26,6 +33,7 @@
 .container-description{
     width: 100%;
     justify-content: start;
+    top: 3px;
 }
 
 .product-name{
@@ -36,4 +44,11 @@
 .product-category{
     font-size: 16px;
     color: var(--darkLightGrey)
+}
+
+.selected-product{
+    position: relative;
+    width: 276px;
+    height: 276px;
+    background: linear-gradient(180deg, rgba(10, 212, 250, 0.86) 0%, rgba(37, 187, 241, 0.86) 100%);
 }
