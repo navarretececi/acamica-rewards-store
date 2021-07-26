@@ -12,9 +12,6 @@ export const Product =(props)=>{
 
     let neededPoints = props.points - user.points
     
-    console.log("puntos del usuario", user.points)
-    console.log("puntos del producto", props.points)
-    console.log("puntos faltantes", neededPoints)
     return (
         <div className="product flex-column center" onMouseEnter={handleHover} onMouseLeave={handleHover}>
             <div className="container-position">    

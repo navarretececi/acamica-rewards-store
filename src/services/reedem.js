@@ -12,8 +12,14 @@ export const reedem = async(Id) =>{
         body : JSON.stringify(bodyData)
         //body : {productId: productId}
     })
-    const data = await response.json()
-    return data
+    /*t data =  {
+              'error': response.code != 200,
+              'message': response.message
+            }*/
+    //const data = await response.json()
+    //return data
+    return response
+    
   } catch (error){
       console.log(error)
   }

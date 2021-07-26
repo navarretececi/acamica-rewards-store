@@ -1,14 +1,14 @@
-import './App.css';
+import "./App.css";
 import React, { useContext, useEffect } from "react";
 import { AppContext } from "./context/AppContext";
-import { Nav } from './components/nav/Nav'
-import { Header } from './components/header/Header'
-import { Result } from './components/result/Result'
-import { Footer } from './components/footer/Footer'
-import { getUser } from './services/users'
-import { getProducts } from './services/products';
-import { Filter } from './components/filter/Filter';
-import { usePagination } from './utils/pagination'
+import { Nav } from "./components/nav/Nav";
+import { Header } from "./components/header/Header";
+import { Result } from "./components/result/Result";
+import { Footer } from "./components/footer/Footer";
+import { getUser } from "./services/users";
+import { getProducts } from "./services/products";
+import { Filter } from "./components/filter/Filter";
+import { usePagination } from "./utils/pagination"
 
 function App() {
   const { setUser, products, setProducts } = useContext(AppContext);

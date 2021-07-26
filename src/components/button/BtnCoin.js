@@ -1,7 +1,7 @@
 import "./BtnCoin.css";
 import React, { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
-import { addPoints } from '../../services/points';
+import { addPoints } from "../../services/points";
 
 export const BtnCoin =()=>{
     const { handlerAddPoint } = useContext(AppContext);

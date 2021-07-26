@@ -9,10 +9,17 @@ export const SelectedProduct =(props)=>{
    
     const handleReedem =()=>{
         reedem(props.id)
-            .then ((data) => {
+            .then ((response) => {
                 handlerSubtractPoint(props.points)
-                alert(data.message)
+                //alert(data.message)
+                console.log("codigo:", response.status)
+                console.log("soy la data del canje" , response)
+                return response.json()
             })
+            .then ((data) => {
+                console.log("message:", data.message)
+            })
+            
         }
     
     return (

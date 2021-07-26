@@ -1,8 +1,8 @@
-import './Nav.css';
-import { BtnTextImg } from '../button/BtnTextImg'
-import { BtnCoin } from '../button/BtnCoin'
-import React, { useContext } from 'react';
-import { AppContext } from '../../context/AppContext';
+import "./Nav.css";
+import { BtnTextImg } from "../button/BtnTextImg";
+import { BtnCoin } from "../button/BtnCoin";
+import React, { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 
 export const Nav=()=>{
     const { user } = useContext(AppContext);
