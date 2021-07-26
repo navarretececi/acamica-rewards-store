@@ -12,6 +12,7 @@ export const Result =()=>{
                products.length > 0 ? products.map((producto) => 
                 <Product 
                     key={producto._id}
+                    id={producto._id}
                     url={producto.img.hdUrl}
                     name={producto.name}
                     category={producto.category}

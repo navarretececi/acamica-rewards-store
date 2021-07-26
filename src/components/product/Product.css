@@ -3,8 +3,8 @@
 }
 
 .blue-bag{
-    justify-content: center;
-    display: flex;
+    width: fit-content;
+    left: 208px;
 }
 
 .product{
@@ -13,10 +13,6 @@
     margin: 1%;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     background: var(--white);
-}
-
-.product:hover{
-    background: linear-gradient(180deg, rgba(10, 212, 250, 0.86) 0%, rgba(37, 187, 241, 0.86) 100%);
 }
 
 .product-container{
@@ -48,7 +44,14 @@
 
 .selected-product{
     position: relative;
+    padding: 7% 0 0 4%;
     width: 276px;
     height: 276px;
     background: linear-gradient(180deg, rgba(10, 212, 250, 0.86) 0%, rgba(37, 187, 241, 0.86) 100%);
+}
+
+.text-product-point{
+    font-size: 36px;
+    color: var(--white);
+    margin-right: 10%;
 }

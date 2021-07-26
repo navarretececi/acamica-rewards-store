@@ -16,7 +16,6 @@
     background: var(--textDarkGrey);
     width: 150px;
     height: 42px;
-    justify-content: space-between;
 }
 
 .text-neededPoints{

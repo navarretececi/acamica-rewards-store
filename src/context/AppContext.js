@@ -10,13 +10,18 @@ export default function AppProvider({ children }) {
 
   const handlerAddPoint =()=>{
     let newUser = {...user}
-    /* newUser.points = user.points + 1000 */
-    newUser.points = user.points - 526000
+    newUser.points = user.points + 1000
     setUser(newUser)
-}
+  }
+
+  const handlerSubtractPoint =(points)=>{
+    let newUser = {...user}
+    newUser.points = user.points - points
+    setUser(newUser)
+  }
 
   return (
-    <AppContext.Provider value={{user, setUser, handlerAddPoint, products, setProducts, totalProducts}}>
+    <AppContext.Provider value={{user, setUser, handlerAddPoint, handlerSubtractPoint, products, setProducts, totalProducts}}>
         {children}
     </AppContext.Provider>
   );
