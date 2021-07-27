@@ -3,6 +3,8 @@ import React, { useState, useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import { BtnTextImg } from "../button/BtnTextImg";
 import { SelectedProduct } from "./SelectedProduct";
+import { SuccesError } from "../successError/SuccessError";
+
 
 export const Product =(props)=>{
     const { user } = useContext(AppContext);
@@ -32,7 +34,8 @@ export const Product =(props)=>{
                     <h4 className="product-category">{props.category}</h4>
                 </div>
             </div>
-            {(user.points > props.points) && hover ? <SelectedProduct points={props.points} id={props.id}/> : null}
+            <SuccesError description={"OK"} image={"./images/success.svg"} button={"continue"} bgClass={"success"}/> 
+            {/* {(user.points > props.points) && hover ? <SelectedProduct points={props.points} id={props.id}/> : null} */}
         </div>
     )
 }

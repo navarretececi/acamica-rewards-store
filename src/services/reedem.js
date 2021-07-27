@@ -10,16 +10,8 @@ export const reedem = async(Id) =>{
         method : "POST",
         headers, 
         body : JSON.stringify(bodyData)
-        //body : {productId: productId}
     })
-    /*t data =  {
-              'error': response.code != 200,
-              'message': response.message
-            }*/
-    //const data = await response.json()
-    //return data
     return response
-    
   } catch (error){
       console.log(error)
   }

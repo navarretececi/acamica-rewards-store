@@ -16,7 +16,7 @@ export const BtnCoin =()=>{
 
     return (
         <button onClick={handlePoint} className="container-btn-coin center">
-            <img className="center btn-coin" src="./images/addCoin.svg" alt="icono" />
+            <img className="center btn-coin" src="./images/addCoin.png" alt="icono" />
         </button>
     )
 }

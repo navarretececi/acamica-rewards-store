@@ -44,9 +44,10 @@
 
 .selected-product{
     position: relative;
-    padding: 7% 0 0 4%;
     width: 276px;
     height: 276px;
+    justify-content: space-evenly;
+    align-items: center;
     background: linear-gradient(180deg, rgba(10, 212, 250, 0.86) 0%, rgba(37, 187, 241, 0.86) 100%);
 }
 

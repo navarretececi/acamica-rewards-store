@@ -1,6 +1,7 @@
 .container-arrow{
     height: 50px;
     border-radius: 50%;
+    border: none;
 }
 
 .btn-arrow{
