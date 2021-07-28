@@ -32,7 +32,7 @@ export const Product =(props)=>{
                     <h4 className="product-category">{props.category}</h4>
                 </div>
             </div>
-           {(user.points > props.points) && hover ? <SelectedProduct points={props.points} id={props.id}/> : null}
+            {(user.points > props.points) && hover ? <SelectedProduct points={props.points} id={props.id}/> : null}
         </div>
     )
 }

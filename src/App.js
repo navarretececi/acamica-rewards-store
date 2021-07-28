@@ -12,9 +12,13 @@ import { usePagination } from "./utils/pagination"
 import { Notification } from "./components/notification/Notification";
 
 function App() {
-  const { setUser, products, setProducts, reedemStatus } = useContext(AppContext);
+  const { setUser, paginationList, setPaginationList, setProducts, products } = useContext(AppContext);
+ /*  const p usePagination(data,8)
+  /* const handlerPagination =(data)=>{
+    const p = usePagination(data,8)
+    setPaginationList(p)
+  } */
 
-  console.log(products)
   useEffect (()=>{
       getUser()
         .then ((user) =>{
@@ -24,16 +28,18 @@ function App() {
 
   useEffect (()=>{
     getProducts()
-    .then ((prod) => setProducts(prod))
+    .then ((prod) => {
+      setProducts(prod)
+      })
 } , [setProducts])
 
-const nuevos_productos = usePagination(products,2)
-//console.log("nuevos pructos:", nuevos_productos.currentData())
-//console.log("productos old (a este hay q hacerle el map ahora)", products.lenght)
+
+ 
+  //const a = usePagination(products,2)
+
 
   return (
     <div>
-
       <Notification />
       <Nav />
       <Header/>

@@ -56,3 +56,9 @@
     color: var(--white);
     margin-right: 10%;
 }
+
+.container-buy-white{
+    position: relative;
+    left: 106px;
+    top: -16px;
+}

@@ -38,7 +38,7 @@ button:hover{
 }
 
 .normal-text{
-  font-size: 20px;
+  font-size: 15px;
   color: var(--textDarkGrey);
 }
 
@@ -46,6 +46,12 @@ button:hover{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 480px) {
+  .normal-text{
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 600px) {

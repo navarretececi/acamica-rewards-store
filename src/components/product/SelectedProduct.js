@@ -5,9 +5,7 @@ import { BtnText } from "../button/BtnText";
 import { reedem } from "../../services/reedem"
 
 export const SelectedProduct =(props)=>{
-    const { handlerSubtractPoint, reedemStatus, setReedemStatus } = useContext(AppContext);
-
-    console.log("soy el canje", reedemStatus)
+    const { handlerSubtractPoint, setReedemStatus } = useContext(AppContext);
    
     const handleReedem =()=>{
         reedem(props.id)
@@ -17,7 +15,6 @@ export const SelectedProduct =(props)=>{
                 return response.json();
             })
             .then((data) =>{ 
-                console.log("data" ,data)
                 setReedemStatus({status:true, msg: data.message})})
             .catch(error => {
                 setReedemStatus({status:false, msg: "ups hubo un error"})
@@ -26,7 +23,7 @@ export const SelectedProduct =(props)=>{
     
     return (
         <div className="selected-product flex-column">
-            <div className="top-icono">
+            <div className="container-buy-white">
                 <img src="./images/buy-white.svg" alt="bag" />
             </div>
             <div className="flex-row center">

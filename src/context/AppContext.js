@@ -6,6 +6,7 @@ export default function AppProvider({ children }) {
   const [user, setUser] = useState({})
   const [products, setProducts] = useState([])
   const [reedemStatus, setReedemStatus] = useState({})
+  const [paginationList, setPaginationList] = useState(products)
 
   let totalProducts = products.length
 
@@ -22,7 +23,7 @@ export default function AppProvider({ children }) {
   }
 
   return (
-    <AppContext.Provider value={{user, setUser, handlerAddPoint, handlerSubtractPoint, products, setProducts, totalProducts, reedemStatus, setReedemStatus}}>
+    <AppContext.Provider value={{user, setUser, handlerAddPoint, handlerSubtractPoint, products, setProducts, totalProducts, reedemStatus, setReedemStatus, paginationList, setPaginationList}}>
         {children}
     </AppContext.Provider>
   );
