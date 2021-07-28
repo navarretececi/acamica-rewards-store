@@ -9,9 +9,10 @@ import { getUser } from "./services/users";
 import { getProducts } from "./services/products";
 import { Filter } from "./components/filter/Filter";
 import { usePagination } from "./utils/pagination"
+import { Notification } from "./components/notification/Notification";
 
 function App() {
-  const { setUser, products, setProducts } = useContext(AppContext);
+  const { setUser, products, setProducts, reedemStatus } = useContext(AppContext);
 
   console.log(products)
   useEffect (()=>{
@@ -32,6 +33,8 @@ const nuevos_productos = usePagination(products,2)
 
   return (
     <div>
+
+      <Notification />
       <Nav />
       <Header/>
       <section className="section">
@@ -39,7 +42,6 @@ const nuevos_productos = usePagination(products,2)
         <Result />
         <Footer />
       </section>
-      
     </div>
   );
 }

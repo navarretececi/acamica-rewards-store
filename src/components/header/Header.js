@@ -1,7 +1,6 @@
 import "./Header.css";
 
 export const Header =()=>{
-
     return (
         <header className="header">
             <img className="img-portal" src="./images/header-x2.png" alt="auriculares-inalambricos" />

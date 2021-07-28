@@ -1,0 +1,34 @@
+.container-msj{
+    position: relative;
+    width: 250px;
+    height: 232px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 18px 0px rgb(50 50 50 / 75%);
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.success{
+    background-image: linear-gradient(325deg, #f2ffa0 0, #dfff9f 16.67%, #ccfd9e 33.33%, #b9f29d 50%, #a7e79b 66.67%, #98dc9a 83.33%, #8ad399 100%);
+}
+
+.error{
+    background-image: linear-gradient(180deg, #fbac8d 0, #f7a38a 12.5%, #f19583 25%, #e68379 37.5%, #d86c6c 50%, #c95561 62.5%, #bd425b 75%, #b33259 87.5%, #ac275b 100%);
+}
+
+.image-ok-error{
+    max-height: 90px;
+}
+
+.button-ok-error{
+    border-radius: 10px;
+    border: none;
+    width: 145px;
+    height: 34px;
+}
+
+.text10{
+    font-size: 10px;
+    text-align: center;
+}
