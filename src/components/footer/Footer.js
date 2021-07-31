@@ -4,11 +4,11 @@ import { AppContext } from "../../context/AppContext";
 import { Pagination } from "../pagination/Pagination";
 
 export const Footer =()=>{
-    const { totalProducts } = useContext(AppContext);
+    const { totalProducts, paginationList } = useContext(AppContext);
 
     return(
         <footer className="footer flex-row">
-            <h3 className="normal-text">xx of {totalProducts} products</h3>
+            <h3 className="normal-text">{paginationList.currentData().length} of {totalProducts} products</h3>
             <Pagination />
         </footer>
     )

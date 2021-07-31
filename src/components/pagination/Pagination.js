@@ -1,5 +1,4 @@
 import "./Pagination.css";
-import { usePagination } from "../../utils/pagination";
 import { useState } from "react";
 
 export const Pagination =()=>{
