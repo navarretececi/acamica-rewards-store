@@ -2,9 +2,10 @@ import "./BtnCoin.css";
 import React, { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import { addPoints } from "../../services/points";
+import { getProducts } from "../../services/products"
 
 export const BtnCoin =()=>{
-    const { handlerAddPoint } = useContext(AppContext);
+    const { handlerAddPoint, setProducts } = useContext(AppContext);
    
     const handlePoint =()=>{
         addPoints()
@@ -12,6 +13,10 @@ export const BtnCoin =()=>{
                 handlerAddPoint()
                 alert(data.message)
             })
+            getProducts()
+            .then ((prod) => {
+              setProducts(prod)
+              })
         }
 
     return (
