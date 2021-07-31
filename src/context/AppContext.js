@@ -8,6 +8,7 @@ export default function AppProvider({ children }) {
   const [products, setProducts] = useState([])
   const [reedemStatus, setReedemStatus] = useState({})
 
+
   const paginationList = usePagination(products, 16)
 
   let totalProducts = products.length

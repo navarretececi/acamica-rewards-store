@@ -1,15 +1,14 @@
 import "./Result.css";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AppContext } from "../../context/AppContext";
 import { Product } from "../product/Product";
 
 export const Result =()=>{
-  const { paginationList } = useContext(AppContext);
-  
+  const { paginationList, products } = useContext(AppContext);
+
     return(
         <main className="result flex-row">
             {
-                
                 paginationList.currentData().length > 0 ?
                 paginationList.currentData().map((producto) => 
 

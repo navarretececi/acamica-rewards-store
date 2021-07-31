@@ -1,23 +1,16 @@
 import "./Pagination.css";
-import { useState } from "react";
+import React, { useContext} from "react";
+import { AppContext } from "../../context/AppContext";
 
 export const Pagination =()=>{
-    const [page, setPage] = useState(1)
-
-    const handlerNexPage =()=>{
-       setPage (page+1)
-    }
-
-    const handlerPrevPage =()=>{
-        setPage (page-1)
-    }
+    const { paginationList} = useContext(AppContext);
         
     return (
         <div className="flex-row btn-arrow center">
-             <button onClick={handlerNexPage} className="container-arrow">
+             <button onClick={()=>paginationList.prev()} className="container-arrow">
                 <img src="./images/arrow-left.svg" alt="flecha"/>
             </button>
-            <button onClick={handlerPrevPage} className="container-arrow">
+            <button onClick={()=>paginationList.next()} className="container-arrow">
                 <img src="./images/arrow-right.svg" alt="flecha"/>
             </button>
         </div>

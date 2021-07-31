@@ -3,18 +3,24 @@ import React, { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import { BtnText} from "../button/BtnText";
 import { Pagination } from "../pagination/Pagination";
-import { filterByAvailability,resultByAvailability, lowestPrice, highestPrice } from "../../utils/filter";
+import { filterByAvailability, sortByLowestPrice, sortByhighestPrice } from "../../utils/filter";
 
 export const Filter =()=>{
     const { totalProducts, user, setProducts, paginationList, products } = useContext(AppContext);
-    
-    
-    console.log("products", products)
-    console.log("resultByAvailability", resultByAvailability)
 
 const handleFilterByAvailability =()=>{
-    filterByAvailability(paginationList.currentData(),user)
+    let resultByAvailability = filterByAvailability(products,user)
     setProducts(resultByAvailability)
+}
+
+const handleSortByLowestPrice =()=>{
+    let resultLowestPrice = sortByLowestPrice(products)
+    setProducts(resultLowestPrice)
+}
+
+const handleSortByhighestPrice =()=>{
+    let resultHighestPrice = sortByhighestPrice(products)
+    setProducts(resultHighestPrice)
 }
  
 
@@ -31,10 +37,10 @@ const handleFilterByAvailability =()=>{
                 <div className="container-btn flex-row">
                     <div className="flex-row container-btn-filter">
                         <BtnText text={"Most recent"} />
-                        <BtnText text={"Lowest price"} handlerOnClick={()=>lowestPrice(paginationList.currentData())}/>
+                        <BtnText text={"Lowest price"} handlerOnClick={handleSortByLowestPrice}/>
                     </div>
                     <div className="flex-row container-btn-filter">
-                        <BtnText text={"Highest price"} handlerOnClick={()=>highestPrice(paginationList.currentData())}/>
+                        <BtnText text={"Highest price"} handlerOnClick={handleSortByhighestPrice}/>
                         <BtnText text={"Availability"} handlerOnClick={handleFilterByAvailability}/>
                     </div>
                     
