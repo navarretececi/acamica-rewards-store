@@ -1,10 +1,12 @@
 import "./Result.css";
-import React, { useContext, useEffect } from "react";
+import React, { useContext} from "react";
 import { AppContext } from "../../context/AppContext";
 import { Product } from "../product/Product";
 
 export const Result =()=>{
   const { paginationList, products } = useContext(AppContext);
+
+  console.log("products", products)
 
     return(
         <main className="result flex-row">

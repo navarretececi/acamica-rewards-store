@@ -4,25 +4,30 @@ import { AppContext } from "../../context/AppContext";
 import { BtnText} from "../button/BtnText";
 import { Pagination } from "../pagination/Pagination";
 import { filterByAvailability, sortByLowestPrice, sortByhighestPrice } from "../../utils/filter";
+import { getProducts } from "../../services/products";
 
 export const Filter =()=>{
     const { totalProducts, user, setProducts, paginationList, products } = useContext(AppContext);
 
-const handleFilterByAvailability =()=>{
-    let resultByAvailability = filterByAvailability(products,user)
-    setProducts(resultByAvailability)
-}
+    const handleFilterByAvailability =()=>{
+        let resultByAvailability = filterByAvailability(products,user)
+        setProducts(resultByAvailability)
+    }
 
-const handleSortByLowestPrice =()=>{
-    let resultLowestPrice = sortByLowestPrice(products)
-    setProducts(resultLowestPrice)
-}
+    const handleSortByLowestPrice =()=>{
+        let resultLowestPrice = sortByLowestPrice(products)
+        setProducts(resultLowestPrice)
+    }
 
-const handleSortByhighestPrice =()=>{
-    let resultHighestPrice = sortByhighestPrice(products)
-    setProducts(resultHighestPrice)
-}
- 
+    const handleSortByhighestPrice =()=>{
+        let resultHighestPrice = sortByhighestPrice(products)
+        setProducts(resultHighestPrice)
+    }
+
+    const clearSort =()=>{
+        getProducts()
+            .then ((prod) => setProducts(prod))
+    }
 
     return (
         <aside className="filter flex-row">
@@ -36,12 +41,12 @@ const handleSortByhighestPrice =()=>{
                 </div>
                 <div className="container-btn flex-row">
                     <div className="flex-row container-btn-filter">
-                        <BtnText text={"Most recent"} />
                         <BtnText text={"Lowest price"} handlerOnClick={handleSortByLowestPrice}/>
+                        <BtnText text={"Highest price"} handlerOnClick={handleSortByhighestPrice}/>
                     </div>
                     <div className="flex-row container-btn-filter">
-                        <BtnText text={"Highest price"} handlerOnClick={handleSortByhighestPrice}/>
                         <BtnText text={"Availability"} handlerOnClick={handleFilterByAvailability}/>
+                        <BtnText text={"Clear sort"} handlerOnClick={clearSort} />
                     </div>
                     
                 </div>
