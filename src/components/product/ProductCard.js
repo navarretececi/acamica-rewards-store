@@ -4,7 +4,7 @@ import { AppContext } from "../../context/AppContext";
 import { BtnTextImg } from "../button/BtnTextImg";
 import { SelectedProduct } from "./SelectedProduct";
 
-export const Product =(props)=>{
+export const ProductCard =(props)=>{
     const { user } = useContext(AppContext);
     const [hover, setHover] = useState(false);
     

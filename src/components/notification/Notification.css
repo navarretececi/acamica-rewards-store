@@ -32,3 +32,7 @@
     font-size: 10px;
     text-align: center;
 }
+
+.bg-green{
+    background: rgb(71,220,213);
+}

@@ -16,7 +16,7 @@
 
 .text-full{
   width: 100%;
-  height: 100%;
+  height: 130%;
 }
 
 .text-full:hover{
@@ -27,11 +27,11 @@
   color: white;
 }
 
-.clear{
+.pink{
   background: rgb(216, 71, 156);
 }
 
-.clear:hover{
+.pink:hover{
   background: rgb(216,6,129);
 }
 

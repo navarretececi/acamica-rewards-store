@@ -1,25 +1,24 @@
 .nav{
     padding: 1% 2%;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 9999;
+}
+
+.container-logo{
+    display: flex;
+    align-items: center;
 }
 
 .container-points{
-    width: 260px;
-    justify-content: space-between;
-}
-
-.container-user{
-    width: 200px;
-    display: flex;
+    min-width: 350px;
     justify-content: space-between;
 }
 
 @media (min-width: 600px) {
     .container-user{
         width: 240px;
-    }
-
-    .container-points{
-        width: 300px;
     }
 }

@@ -23,6 +23,12 @@ body{
 --textDarkGrey: #616161;
 }
 
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
 button:hover{
   cursor: pointer;
 }

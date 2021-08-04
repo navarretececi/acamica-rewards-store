@@ -3,15 +3,12 @@ import React, { useContext, useEffect } from "react";
 import { AppContext } from "./context/AppContext";
 import { Nav } from "./components/nav/Nav";
 import { Header } from "./components/header/Header";
-import { Result } from "./components/result/Result";
-import { Footer } from "./components/footer/Footer";
-import { getUser } from "./services/users";
-import { getProducts } from "./services/products";
-import { Filter } from "./components/filter/Filter";
 import { Notification } from "./components/notification/Notification";
+import { getUser } from "./services/users";
+import { Router } from "./routers/Router"
 
 function App() {
-  const { setUser, setProducts } = useContext(AppContext);
+  const { setUser } = useContext(AppContext);
 
   useEffect (()=>{
       getUser()
@@ -20,25 +17,13 @@ function App() {
         })
   } , [setUser])
 
-  useEffect (()=>{
-    getProducts()
-    .then ((prod) => {
-      setProducts(prod)
-      })
-} , [setProducts])
-
-
   return (
-    <div>
+    <>
       <Notification />
       <Nav />
       <Header/>
-      <section className="section">
-        <Filter />
-        <Result />
-        <Footer />
-      </section>
-    </div>
+      <Router />
+    </>
   );
 }
 

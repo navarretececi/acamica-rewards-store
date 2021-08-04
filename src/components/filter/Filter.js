@@ -46,7 +46,7 @@ export const Filter =()=>{
                     </div>
                     <div className="flex-row container-btn-filter">
                         <BtnText text={"Availability"} handlerOnClick={handleFilterByAvailability}/>
-                        <BtnText text={"Clear sort"} handlerOnClick={clearSort} classbutton={"clear"} classtext={"text-white"} />
+                        <BtnText text={"Clear sort"} handlerOnClick={clearSort} classbutton={"pink"} classtext={"text-white"} />
                     </div>
                     
                 </div>

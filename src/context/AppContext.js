@@ -7,6 +7,7 @@ export default function AppProvider({ children }) {
   const [user, setUser] = useState({})
   const [products, setProducts] = useState([])
   const [reedemStatus, setReedemStatus] = useState({})
+ 
 
 
   const paginationList = usePagination(products, 16)

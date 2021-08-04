@@ -1,21 +1,19 @@
 import "./Result.css";
 import React, { useContext} from "react";
 import { AppContext } from "../../context/AppContext";
-import { Product } from "../product/Product";
+import { ProductCard } from "../product/ProductCard";
 
 export const Result =()=>{
-  const { paginationList, products } = useContext(AppContext);
-
-  console.log("products", products)
+  const { paginationList } = useContext(AppContext);
 
     return(
         <main className="result flex-row">
             {
                 paginationList.currentData().length > 0 ?
-                paginationList.currentData().map((producto) => 
+                paginationList.currentData().map((producto, index) => 
 
-               <Product 
-                    key={producto._id}
+               <ProductCard 
+                    key={index}
                     id={producto._id}
                     url={producto.img.hdUrl}
                     name={producto.name}

@@ -1,9 +1,9 @@
-import "./Footer.css";
+import "./FooterPagination.css";
 import React, { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import { Pagination } from "../pagination/Pagination";
 
-export const Footer =()=>{
+export const FooterPagination =()=>{
     const { totalProducts, paginationList } = useContext(AppContext);
 
     return(

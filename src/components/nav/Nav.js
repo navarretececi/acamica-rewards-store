@@ -1,25 +1,34 @@
 import "./Nav.css";
-import { BtnTextImg } from "../button/BtnTextImg";
-import { BtnCoin } from "../button/BtnCoin";
 import React, { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
+import { Link } from "react-router-dom";
+import { BtnTextImg } from "../button/BtnTextImg";
+import { BtnCoin } from "../button/BtnCoin";
+import { BtnText } from "../button/BtnText";
 
 export const Nav=()=>{
     const { user } = useContext(AppContext);
 
     return(
         <nav className="nav flex-row">
-            <div className="center">
+            <div className="container-logo">
                 <img src="./images/aerolab-logo.svg" alt="logo" />
             </div>
-            <div className="container-points flex-row">
-                <div className="container-user flex-row">
-                    <h3 className="normal-text center">{user.name}</h3>
-                    <BtnTextImg text={user.points} />
-                </div>
-                <div>
-                    <BtnCoin />
-                </div>
+            <div className="container-points flex-row center">
+                <h3 className="normal-text center">{user.name}</h3>
+                <BtnTextImg text={user.points} />
+                <BtnCoin />
+                {
+                    window.location.pathname ==="/" ?
+                        <Link to="/history">
+                            <BtnText text={"History"}/> 
+                        </Link> : 
+                        <Link to="/">
+                            <BtnText text={"Home"} classbutton={"pink"} classtext={"text-white"} />
+                        </Link>
+                }
+               
+                
             </div>
         </nav>
     )

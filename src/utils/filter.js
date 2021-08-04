@@ -5,7 +5,7 @@ export const filterByAvailability =(list, user)=>{
 }
 
 export const sortByLowestPrice =(list)=>{
-    let resultLowestPrice = [...list].sort(function(a,b){
+    let resultLowestPrice = list.sort(function(a,b){
         if (a.cost > b.cost) {
             return 1;
         }
@@ -14,11 +14,11 @@ export const sortByLowestPrice =(list)=>{
         }
         return 0;         
     }) 
-    return resultLowestPrice  
+    return [...resultLowestPrice]  
 }
 
 export const sortByhighestPrice =(list)=>{
-    let resultHighestPrice = [...list].sort(function(a,b){
+    let resultHighestPrice = list.sort(function(a,b){
         if (a.cost > b.cost) {
             return -1;
         }
@@ -27,5 +27,5 @@ export const sortByhighestPrice =(list)=>{
         }
         return 0;         
     }) 
-    return resultHighestPrice  
+    return [...resultHighestPrice]  
 }
