@@ -1,0 +1,21 @@
+li{
+    list-style: none;
+}
+
+.menu{
+    flex: 3;
+}
+
+.pink-line{
+    border-radius: 0px;
+    background: none;
+    width: auto;
+    padding: 0 7%;
+  }
+  
+  .pink-line:hover{
+    border-bottom: 3.5px solid rgb(216,6,129);
+    background: none;
+    box-shadow:none;
+   
+  }

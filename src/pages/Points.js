@@ -3,7 +3,6 @@ import { AppContext } from "../context/AppContext";
 import { Title } from "../components/title/Title";
 import { Selector } from "../components/selector/Selector";
 
-
 export const Points =()=>{
     const { setProducts } = useContext(AppContext);
 
@@ -15,6 +14,7 @@ export const Points =()=>{
                 <Selector description={"add 5000 points"}/>
                 <Selector description={"add 7500 points"}/>
             </div>
+            <button>AGREGAR</button>
         </section>
     )
 }
