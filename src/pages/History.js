@@ -17,7 +17,7 @@ export const History=()=>{
 
     return (
         <section className="section">
-            <Title title={"Historial de cambios"}/>
+            <Title title={"Get user redeem history"}/>
             {
                 paginationList.currentData().map((producto)=>{
                     return(

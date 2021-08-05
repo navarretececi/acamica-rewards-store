@@ -19,16 +19,23 @@ export const Nav=()=>{
                 <BtnTextImg text={user.points} />
                 <BtnCoin />
                 {
-                    window.location.pathname ==="/" ?
-                        <Link to="/history">
-                            <BtnText text={"History"}/> 
-                        </Link> : 
+                    window.location.pathname ==="/points" ?     
                         <Link to="/">
                             <BtnText text={"Home"} classbutton={"pink"} classtext={"text-white"} />
-                        </Link>
+                        </Link> :
+                                <Link to="/points">
+                                    <BtnText text={"Add points"}/> 
+                                </Link>
                 }
-               
-                
+                {
+                    window.location.pathname ==="/history" ?
+                        <Link to="/">
+                            <BtnText text={"Home"} classbutton={"pink"} classtext={"text-white"} />
+                        </Link> :
+                                <Link to="/history">
+                                    <BtnText text={"History"}/> 
+                                </Link> 
+                } 
             </div>
         </nav>
     )
