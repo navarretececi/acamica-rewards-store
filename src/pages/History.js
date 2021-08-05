@@ -6,20 +6,20 @@ import { Title } from "../components/title/Title";
 import { getHistory } from "../services/history";
 
 export const History=()=>{
-    const { paginationList, setProducts } = useContext(AppContext);
+    const { paginationHistoryList, setHistory } = useContext(AppContext);
   
     useEffect (()=>{
       getHistory()
       .then ((prod) => {
-        setProducts(prod)
+        setHistory(prod)
         })
-  } , [setProducts])
+  } , [setHistory])
 
     return (
         <section className="section">
             <Title title={"Get user redeem history"}/>
             {
-                paginationList.currentData().map((producto)=>{
+                paginationHistoryList.currentData().map((producto)=>{
                     return(
                         <SmallProductCard
                             key={producto.createDate}
