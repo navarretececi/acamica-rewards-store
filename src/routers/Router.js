@@ -16,7 +16,7 @@ export const Router =()=>{
             <Route exact path="/points">
                 <Points />
             </Route>
-            <Route path="*">
+            <Route path="/">
                 <NotFound />
             </Route>
         </Switch> 
