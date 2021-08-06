@@ -1,9 +1,7 @@
 import {BASE_URL, headers} from "./constants"
 
-const bodyData = {amount: 1000}
-
-
-export const addPoints = async() =>{
+export const addPoints = async(value) =>{
+  const bodyData = {amount: value}
   try{
     const response = await fetch(BASE_URL+"user/points",{
         method : "POST",

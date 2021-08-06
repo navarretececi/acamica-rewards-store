@@ -16,9 +16,9 @@ export default function AppProvider({ children }) {
 
   let totalProducts = products.length
 
-  const handlerAddPoint =()=>{
+  const handlerAddPoint =(value)=>{
     let newUser = {...user}
-    newUser.points = user.points + 1000
+    newUser.points = user.points + value
     setUser(newUser)
   }
 

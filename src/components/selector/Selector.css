@@ -7,10 +7,25 @@
 
 .container-selector{
     height: 85px;
+    width: 80%;
 }
 
 .radio{
     width: 80px;
     height: 25px;
 }
+
+.selector{
+    width: 100%;
+    height: 75%;
+    border-radius: 10px;
+    border: none;
+    background: var(--white);
+    opacity: 50%;   
+} 
+
+.selector:hover{
+    opacity: 100%;
+}
+
 

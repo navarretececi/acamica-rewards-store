@@ -7,10 +7,10 @@ import { getProducts } from "../../services/products"
 export const Selector =(props)=>{
     const { points, setPoints, handlerAddPoint, setProducts} = useContext(AppContext);
 
-    const handlePoint =()=>{
-        addPoints()
+    const handlePoint =(value)=>{
+        addPoints(value)
             .then ((data) => {
-                handlerAddPoint()
+                handlerAddPoint(value)
                 alert(data.message)
             })
             getProducts()
@@ -21,7 +21,7 @@ export const Selector =(props)=>{
 
     return(
         <div className="container-selector flex-row center">
-            <button value={points} onClick={handlePoint} className="normal-text">{props.description}</button>  
+            <button value={points} onClick={()=>handlePoint(props.value)} className="selector normal-text">{props.description}</button>  
         </div>
     )
 }
