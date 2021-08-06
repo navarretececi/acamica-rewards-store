@@ -16,7 +16,7 @@ export const Router =()=>{
             <Route path="/acamica-rewards-store/points">
                 <Points />
             </Route>
-            <Route path="/">
+            <Route path="*">
                 <NotFound />
             </Route>
         </Switch> 
