@@ -5,7 +5,7 @@ import { addPoints } from "../../services/points";
 import { getProducts } from "../../services/products"
 
 export const Selector =(props)=>{
-    const { points, setPoints, handlerAddPoint, setProducts} = useContext(AppContext);
+    const { points, handlerAddPoint, setProducts} = useContext(AppContext);
 
     const handlePoint =(value)=>{
         addPoints(value)
