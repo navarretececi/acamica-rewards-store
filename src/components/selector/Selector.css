@@ -21,11 +21,11 @@
     border-radius: 10px;
     border: none;
     background: var(--white);
-    opacity: 50%;   
+    opacity: 0.5;   
 } 
 
 .selector:hover{
-    opacity: 100%;
+    opacity: 1;
 }
 
 

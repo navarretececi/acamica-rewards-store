@@ -12,7 +12,7 @@
 
 .btn-neededPoints{
     padding: 2% 1%;
-    opacity: 65%;
+    opacity: 0.65;
     background: var(--textDarkGrey);
     width: 150px;
     height: 42px;
