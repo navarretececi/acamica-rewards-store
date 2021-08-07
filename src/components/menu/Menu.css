@@ -4,13 +4,15 @@ li{
 
 .menu{
     flex: 3;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .pink-line{
     border-radius: 0px;
     background: none;
     width: auto;
-    padding: 0 7%;
+    padding: 0 2%;
   }
   
   .pink-line:hover{

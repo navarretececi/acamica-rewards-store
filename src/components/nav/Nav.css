@@ -22,3 +22,9 @@
         width: 240px;
     }
 }
+
+@media (min-width: 800px) {
+    .container-points{
+        flex: 1.5;
+    }
+}
