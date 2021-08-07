@@ -1,4 +1,4 @@
-.btn-point{
+.details{
     border-radius: 20.5px;
     padding: 1% 5%;
     background: var(--grey);
@@ -24,7 +24,7 @@
 }
 
 @media (min-width: 600px) {
-    .btn-point{
+    .details{
         padding: 2% 7%;
     }
   }

@@ -1,8 +1,8 @@
-import "./BtnTextImg.css";
+import "./Details.css";
 
-export const BtnTextImg =(props)=>{
+export const Details =(props)=>{
     return (
-        <div className={`btn-point flex-row ${props.classContainer}`}>
+        <div className={`details flex-row ${props.classContainer}`}>
             <h5 className={`normal-text center ${props.classText}`}>{props.text}</h5>
             <img className="center" src="./images/coin.svg" alt="icono" />
         </div>

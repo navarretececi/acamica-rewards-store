@@ -1,7 +1,7 @@
 import "./Nav.css";
 import React, { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
-import { BtnTextImg } from "../button/BtnTextImg";
+import { Details } from "../details/Details";
 import { Menu } from "../menu/Menu";
 
 export const Nav=()=>{
@@ -15,7 +15,7 @@ export const Nav=()=>{
             <Menu />
             <div className="container-points flex-row center">
                 <h3 className="normal-text center">{user.name}</h3>
-                <BtnTextImg text={user.points} />
+                <Details text={user.points} />
             </div>
         </nav>
     )
