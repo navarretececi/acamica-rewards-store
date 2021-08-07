@@ -1,7 +1,7 @@
 import "./Product.css";
 import React, { useState, useContext } from "react";
 import { AppContext } from "../../context/AppContext";
-import { BtnTextImg } from "../button/BtnTextImg";
+import { Details } from "../details/Details";
 import { SelectedProduct } from "./SelectedProduct";
 
 export const ProductCard =(props)=>{
@@ -18,7 +18,7 @@ export const ProductCard =(props)=>{
                 <div className="product-container">
                     <img className="photo" src={props.url} alt="producto" />
                     {
-                        user.points < props.points ? <BtnTextImg 
+                        user.points < props.points ? <Details 
                                                     classContainer={`btn-neededPoints top-icono center`} 
                                                     classText={`text-neededPoints`} 
                                                     text={`You need ${neededPoints}`}/> : 
