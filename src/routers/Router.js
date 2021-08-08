@@ -16,9 +16,9 @@ export const Router =()=>{
             <Route path="/points">
                 <Points />
             </Route>
-            <Route>
+            {/* <Route>
                 <NotFound />
-            </Route>
+            </Route> */}
         </Switch> 
     )
 }
