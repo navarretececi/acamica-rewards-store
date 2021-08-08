@@ -10,7 +10,7 @@ import { BrowserRouter } from "react-router-dom";
 ReactDOM.render(
   <React.StrictMode>
     <AppProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/acamica-rewards-store/">
         <App />
       </BrowserRouter>
     </AppProvider>
