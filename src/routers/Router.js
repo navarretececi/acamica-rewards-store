@@ -7,13 +7,13 @@ import { NotFound } from "../components/notification/NotFound";
 export const Router =()=>{
     return (
         <Switch>
-            <Route exact path="/acamica-rewards-store/">
+            <Route exact path="/">
                 <Home />
             </Route>
-            <Route path="/acamica-rewards-store/history">
+            <Route path="/history">
                 <History />
             </Route>
-            <Route path="/acamica-rewards-store/points">
+            <Route path="/points">
                 <Points />
             </Route>
             <Route>

@@ -1,6 +1,6 @@
 .details{
     border-radius: 20.5px;
-    padding: 1% 5%;
+    padding: 2%;
     background: var(--grey);
 }
 
@@ -22,10 +22,3 @@
     font-size: 13px;
     color: var(--white);
 }
-
-@media (min-width: 600px) {
-    .details{
-        padding: 2% 7%;
-    }
-  }
-  
