@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/acamica-rewards-store/static/css/main.e2216f7b.chunk.css",
-    "main.js": "/acamica-rewards-store/static/js/main.6fa00bf5.chunk.js",
-    "main.js.map": "/acamica-rewards-store/static/js/main.6fa00bf5.chunk.js.map",
+    "main.js": "/acamica-rewards-store/static/js/main.a2cfbc89.chunk.js",
+    "main.js.map": "/acamica-rewards-store/static/js/main.a2cfbc89.chunk.js.map",
     "runtime-main.js": "/acamica-rewards-store/static/js/runtime-main.1e247e1c.js",
     "runtime-main.js.map": "/acamica-rewards-store/static/js/runtime-main.1e247e1c.js.map",
     "static/js/2.36c4296a.chunk.js": "/acamica-rewards-store/static/js/2.36c4296a.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1e247e1c.js",
     "static/js/2.36c4296a.chunk.js",
     "static/css/main.e2216f7b.chunk.css",
-    "static/js/main.6fa00bf5.chunk.js"
+    "static/js/main.a2cfbc89.chunk.js"
   ]
 }
