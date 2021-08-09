@@ -1,14 +1,12 @@
 import "./FooterPagination.css";
-import React, { useContext } from "react";
-import { AppContext } from "../../context/AppContext";
+import React from "react";
 import { Pagination } from "../pagination/Pagination";
 
-export const FooterPagination =()=>{
-    const { totalProducts, paginationList } = useContext(AppContext);
+export const FooterPagination =(props)=>{
 
     return(
         <footer className="footer flex-row">
-            <h3 className="normal-text">{paginationList.currentData().length} of {totalProducts} products</h3>
+            <h3 className="normal-text">{props.list.currentData().length} of {props.totalList} products</h3>
             <Pagination />
         </footer>
     )

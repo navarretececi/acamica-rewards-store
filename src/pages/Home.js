@@ -6,7 +6,7 @@ import { FooterPagination } from "../components/footer/FooterPagination"
 import { getProducts } from "../services/products";
 
 export const Home =()=>{
-    const { setProducts } = useContext(AppContext);
+    const { totalProducts, paginationList, setProducts } = useContext(AppContext);
  
     useEffect (()=>{
       getProducts()
@@ -19,7 +19,7 @@ export const Home =()=>{
         <section className="section">
             <Filter />
             <Result />
-            <FooterPagination />
+            <FooterPagination list={paginationList} totalList={totalProducts}/>
         </section>
     )
 }

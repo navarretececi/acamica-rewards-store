@@ -6,7 +6,7 @@ import { Title } from "../components/title/Title";
 import { getHistory } from "../services/history";
 
 export const History=()=>{
-    const { paginationHistoryList, setHistory } = useContext(AppContext);
+    const { paginationHistoryList, setHistory, totalHistory } = useContext(AppContext);
   
     useEffect (()=>{
       getHistory()
@@ -31,7 +31,7 @@ export const History=()=>{
                     )
                 })
             }
-            <FooterPagination />
+            <FooterPagination list={paginationHistoryList} totalList={totalHistory}/>
         </section>
     )
 }

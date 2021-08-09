@@ -15,6 +15,7 @@ export default function AppProvider({ children }) {
   const paginationHistoryList = usePagination(history, 16)
 
   let totalProducts = products.length
+  let totalHistory = history.length
 
   const handlerAddPoint =(value)=>{
     let newUser = {...user}
@@ -43,7 +44,8 @@ export default function AppProvider({ children }) {
                                 setPoints,
                                 history,
                                 setHistory, 
-                                paginationHistoryList}}>
+                                paginationHistoryList, 
+                                totalHistory}}>
         {children}
     </AppContext.Provider>
   );
