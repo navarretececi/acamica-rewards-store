@@ -34,7 +34,7 @@ export const Filter =()=>{
             <div className="container-page center">
                 <h3 className="normal-text">{paginationList.currentData().length} of {totalProducts} products</h3>
             </div>
-            <Pagination />
+            <Pagination list={paginationList} />
             <div className="container-filter flex-row">
                 <div className="container-sort">
                     <h3 className="normal-text">Sort by:</h3>
