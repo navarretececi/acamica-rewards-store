@@ -14,7 +14,7 @@
 
 .container-points{
     flex: 2;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 @media (min-width: 600px) {
