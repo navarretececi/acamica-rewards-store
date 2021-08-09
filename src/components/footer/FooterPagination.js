@@ -7,7 +7,7 @@ export const FooterPagination =(props)=>{
     return(
         <footer className="footer flex-row">
             <h3 className="normal-text">{props.list.currentData().length} of {props.totalList} products</h3>
-            <Pagination />
+            <Pagination list={props.list}/>
         </footer>
     )
 }

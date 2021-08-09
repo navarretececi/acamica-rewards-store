@@ -1,21 +1,19 @@
 import "./Pagination.css";
-import React, { useContext} from "react";
-import { AppContext } from "../../context/AppContext";
+import React from "react";
 
-export const Pagination =()=>{
-    const { paginationList} = useContext(AppContext);
+export const Pagination =(props)=>{
 
     return (
         <div className="flex-row btn-arrow center">
             {
-                paginationList.currentPage > 1 ?
-                    <button onClick={()=>paginationList.prev()} className="container-arrow">
+                props.list.currentPage > 1 ?
+                    <button onClick={()=>props.list.prev()} className="container-arrow">
                         <img src="./images/arrow-left.svg" alt="flecha"/>
                     </button> : null
             }
             {
-               paginationList.currentPage !== paginationList.maxPage ?
-                    <button onClick={()=>paginationList.next()} className="container-arrow">
+               props.list.currentPage !== props.list.maxPage ?
+                    <button onClick={()=>props.list.next()} className="container-arrow">
                         <img src="./images/arrow-right.svg" alt="flecha"/>
                     </button>: null
             } 
